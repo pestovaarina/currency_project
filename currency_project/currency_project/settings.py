@@ -86,3 +86,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+API_KEY = '9e6521ec12714457b4062179b9453b05'
+MAX_LEN = 10

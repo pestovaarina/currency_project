@@ -1,12 +1,13 @@
-from django.http import JsonResponse
+import time
 
 import requests
-import time
+from django.http import JsonResponse
 from collections import deque
 from django_ratelimit.decorators import ratelimit
 
-API_KEY = '9e6521ec12714457b4062179b9453b05'
-last_10_requests = deque(maxlen=10)
+from currency_project.settings import API_KEY, MAX_LEN
+
+last_10_requests = deque(maxlen=MAX_LEN)
 
 
 @ratelimit(key='user', rate='1/10s', method=['GET'], block=False)
