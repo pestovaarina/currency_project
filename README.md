@@ -10,7 +10,7 @@ cd currency_project
 ```
 2. Создать и активировать виртуальное окружение
 ```
-python -m venv env
+python -m venv venv
 source venv/Scripts/activate
 ``` 
 3. Запустить проект
